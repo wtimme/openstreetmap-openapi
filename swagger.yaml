@@ -1,7 +1,7 @@
 openapi: "3.0.0"
 info:
   title: "OpenStreetMap"
-  description: "This is the editing API for OpenStreetMap. You can find out more about it at [wiki.openstreetmap.org](https://wiki.openstreetmap.org/wiki/API_v0.6)."
+  description: "This is the editing API for OpenStreetMap."
   version: "0.6"
   termsOfService: "https://operations.osmfoundation.org/policies/api/"
   license:
