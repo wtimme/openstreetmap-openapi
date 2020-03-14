@@ -39,15 +39,36 @@ components:
       scheme: basic
   schemas:
     OSMResponse:
-      type: array
+      type: object
+      properties:
+        version:
+          type: string
+          example: "0.6"
+          xml:
+            attribute: true
+        copyright:
+          type: string
+          example: "OpenStreetMap and contributors"
+          xml:
+            attribute: true
+        attribution:
+          type: string
+          example: "http://www.openstreetmap.org/copyright"
+          xml:
+            attribute: true
       xml:
         wrapped : true
         name: osm
     UserDetailsResponse:
+      type: object
       allOf:
         - $ref: '#/components/schemas/OSMResponse'
-        - items:
-            $ref: '#/components/schemas/User'
+      properties:
+        user:
+          $ref: '#/components/schemas/User'
+      xml:
+        wrapped : true
+        name: osm
     User:
       xml:
         name: 'user'
