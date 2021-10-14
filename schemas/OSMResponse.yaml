@@ -1,0 +1,11 @@
+type: object
+properties:
+  version:
+    type: string
+    example: "0.6"
+  copyright:
+    type: string
+    example: "OpenStreetMap and contributors"
+  attribution:
+    type: string
+    example: "http://www.openstreetmap.org/copyright"
