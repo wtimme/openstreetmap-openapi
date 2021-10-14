@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 # **getAPICapabilities**
 ```swift
-    open class func getAPICapabilities(completion: @escaping (_ data: OSMResponse?, _ error: Error?) -> Void)
+    open class func getAPICapabilities(completion: @escaping (_ data: APICapabilitiesResponse?, _ error: Error?) -> Void)
 ```
 
 This API call is meant to provide information about the capabilities and limitations of the current API.
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**OSMResponse**](OSMResponse.md)
+[**APICapabilitiesResponse**](APICapabilitiesResponse.md)
 
 ### Authorization
 

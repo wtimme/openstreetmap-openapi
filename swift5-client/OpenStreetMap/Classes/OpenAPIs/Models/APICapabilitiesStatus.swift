@@ -13,11 +13,11 @@ import AnyCodable
 /** The status of the database, API and GPX API. The database field is informational, and the API/GPX-API fields indicate what the client should expect. */
 public struct APICapabilitiesStatus: Codable, Hashable {
 
-    public var database: APIStatus?
-    public var api: APIStatus?
-    public var gpx: APIStatus?
+    public var database: AnyCodable?
+    public var api: AnyCodable?
+    public var gpx: AnyCodable?
 
-    public init(database: APIStatus? = nil, api: APIStatus? = nil, gpx: APIStatus? = nil) {
+    public init(database: AnyCodable? = nil, api: AnyCodable? = nil, gpx: AnyCodable? = nil) {
         self.database = database
         self.api = api
         self.gpx = gpx
