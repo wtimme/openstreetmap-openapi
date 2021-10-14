@@ -34,6 +34,8 @@ components:
   schemas:
     APICapabilities:
       $ref: './schemas/APICapabilities.yaml'
+    APICapabilitiesResponse:
+      $ref: './schemas/APICapabilitiesResponse.yaml'
     APIPermission:
       $ref: './schemas/APIPermission.yaml'
     OSMResponse:

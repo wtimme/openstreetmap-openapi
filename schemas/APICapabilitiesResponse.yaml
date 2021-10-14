@@ -1,0 +1,9 @@
+type: object
+allOf:
+  - $ref: '../schemas/OSMResponse.yaml'
+properties:
+  api:
+    $ref: '../schemas/APICapabilities.yaml'
+xml:
+  wrapped: true
+  name: osm
