@@ -1,0 +1,45 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 1234
+  display_name:
+    type: string
+    example: "JaneDoe"
+  account_created:
+    type: string
+    example: "2010-01-19T23:01:0Z"
+    format: date-time
+  description:
+    type: string
+    example: "# Heading\n\nThe description can contain markdown"
+  changesets:
+    type: object
+    properties:
+      count:
+        type: integer
+        example: 34
+  traces:
+    type: object
+    properties:
+      count:
+        type: integer
+        example: 2
+  messages:
+    type: object
+    properties:
+      received:
+        type: object
+        properties:
+          count:
+            type: integer
+            example: 2
+          unread:
+            type: integer
+            example: 1
+      sent:
+        type: object
+        properties:
+          count:
+            type: integer
+            example: 1
