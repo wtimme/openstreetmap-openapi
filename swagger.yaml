@@ -18,6 +18,8 @@ tags:
 - name: "misc"
   description: "Meta-information on the API and the server"
 paths:
+  /api/versions:
+    $ref: './paths/api_versions.yaml'
   /api/0.6/user/details.json:
     $ref: './paths/user_details.yaml'
 components:

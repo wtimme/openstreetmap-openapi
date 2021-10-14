@@ -1,0 +1,25 @@
+get:
+  tags:
+  - "misc"
+  summary: "Returns a list of API versions supported by this instance."
+  operationId: "getAPIVersions"
+  responses:
+    200:
+      description: "successful operation"
+      content:
+        application/xml:
+          schema:
+            type: object
+            allOf:
+              - $ref: '../schemas/OSMResponse.yaml'
+            properties:
+              api:
+                type: object
+                properties:
+                  version:
+                    type: number
+                    format: double
+                    example: 0.6
+            xml:
+              wrapped: true
+              name: osm
