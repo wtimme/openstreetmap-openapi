@@ -16,7 +16,7 @@ tags:
 - name: "user"
   description: "Everything on the user"
 paths:
-  /user/details:
+  /user/details.json:
     get:
       tags:
       - "user"
@@ -29,7 +29,7 @@ paths:
         200:
           description: "successful operation"
           content:
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/UserDetailsResponse'
 components:
@@ -66,30 +66,19 @@ components:
       properties:
         user:
           $ref: '#/components/schemas/User'
-      xml:
-        wrapped : true
-        name: osm
     User:
-      xml:
-        name: 'user'
       type: object
       properties:
         id:
           type: integer
-          xml:
-            attribute: true
           example: 1234
         display_name:
           type: string
           example: "JaneDoe"
-          xml:
-            attribute: true
         account_created:
           type: string
           example: "2010-01-19T23:01:0Z"
           format: date-time
-          xml:
-            attribute: true
         description:
           type: string
           example: "# Heading\n\nThe description can contain markdown"
@@ -99,16 +88,12 @@ components:
             count:
               type: integer
               example: 34
-              xml:
-                attribute: true
         traces:
           type: object
           properties:
             count:
               type: integer
               example: 2
-              xml:
-                attribute: true
         messages:
           type: object
           properties:
@@ -118,24 +103,15 @@ components:
                 count:
                   type: integer
                   example: 2
-                  xml:
-                    attribute: true
                 unread:
                   type: integer
                   example: 1
-                  xml:
-                    attribute: true
             sent:
               type: object
               properties:
                 count:
                   type: integer
                   example: 1
-                  xml:
-                    attribute: true
-          xml:
-            wrapped : true
-            name: messages
 externalDocs:
   description: "Find more information on the OSM wiki"
   url: "https://wiki.openstreetmap.org/"
