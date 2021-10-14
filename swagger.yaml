@@ -22,6 +22,8 @@ paths:
     $ref: './paths/api_versions.yaml'
   /api/capabilities:
     $ref: './paths/api_capabilities.yaml'
+  /api/0.6/permissions:
+    $ref: './paths/api_permissions.yaml'
   /api/0.6/user/details.json:
     $ref: './paths/user_details.yaml'
 components:
@@ -32,6 +34,8 @@ components:
   schemas:
     APICapabilities:
       $ref: './schemas/APICapabilities.yaml'
+    APIPermission:
+      $ref: './schemas/APIPermission.yaml'
     OSMResponse:
       $ref: './schemas/OSMResponse.yaml'
     User:

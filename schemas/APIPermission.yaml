@@ -1,0 +1,13 @@
+type: string
+example: 'allow_read_prefs'
+description: >
+  Permissions:
+    * `allow_read_prefs` - Read user preferences
+    * `allow_write_prefs` - Modify user preferences
+    * `allow_write_diary` - Create diary entries, comments and make friends
+    * `allow_write_api` - Modify the map
+    * `allow_read_gpx` - Read private GPS traces
+    * `allow_write_gpx` - Upload GPS traces
+    * `allow_write_notes` - Modify notes
+xml:
+  attribute: true
