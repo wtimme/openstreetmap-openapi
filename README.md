@@ -19,5 +19,5 @@ Make sure you are using `swagger-codegen` **3.0.18 or later** and run:
 
     % swagger-codegen generate -i swagger.yml -l swift5 -c config.json -o swift5-client
 
-[1]: https://wtimme.github.io/osm-swagger/
+[1]: https://wtimme.github.io/openstreetmap-openapi/
 [2]: https://editor.swagger.io/?url=https://wtimme.github.io/osm-swagger/swagger.yaml
