@@ -3,9 +3,15 @@ properties:
   version:
     type: string
     example: "0.6"
+    xml:
+      attribute: true
   copyright:
     type: string
     example: "OpenStreetMap and contributors"
+    xml:
+      attribute: true
   attribution:
     type: string
     example: "http://www.openstreetmap.org/copyright"
+    xml:
+      attribute: true
