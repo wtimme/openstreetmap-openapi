@@ -40,6 +40,8 @@ components:
       $ref: './schemas/OSMResponse.yaml'
     User:
       $ref: './schemas/User.yaml'
+    UserDetailsResponse:
+      $ref: './schemas/UserDetailsResponse.yaml'
 externalDocs:
   description: "Find more information on the OSM wiki"
   url: "https://wiki.openstreetmap.org/"

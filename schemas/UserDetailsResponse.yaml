@@ -1,0 +1,6 @@
+type: object
+allOf:
+  - $ref: '../schemas/OSMResponse.yaml'
+properties:
+  user:
+    $ref: '../schemas/User.yaml'
