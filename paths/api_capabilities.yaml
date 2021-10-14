@@ -1,0 +1,20 @@
+get:
+  tags:
+  - "misc"
+  summary: "This API call is meant to provide information about the capabilities and limitations of the current API."
+  operationId: "getAPICapabilities"
+  responses:
+    200:
+      description: "successful operation"
+      content:
+        application/xml:
+          schema:
+            type: object
+            allOf:
+              - $ref: '../schemas/OSMResponse.yaml'
+            properties:
+              api:
+                $ref: '../schemas/APICapabilities.yaml'
+            xml:
+              wrapped: true
+              name: osm

@@ -1,0 +1,10 @@
+type: string
+enum: ['online']
+example: 'online'
+description: >
+  Status:
+    * `online` - Both read and write requests work
+    * `readonly` - Only read requests work
+    * `offline` - No requests work
+xml:
+  attribute: true

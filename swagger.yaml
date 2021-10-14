@@ -20,6 +20,8 @@ tags:
 paths:
   /api/versions:
     $ref: './paths/api_versions.yaml'
+  /api/capabilities:
+    $ref: './paths/api_capabilities.yaml'
   /api/0.6/user/details.json:
     $ref: './paths/user_details.yaml'
 components:
@@ -28,6 +30,8 @@ components:
       type: http
       scheme: basic
   schemas:
+    APICapabilities:
+      $ref: './schemas/APICapabilities.yaml'
     OSMResponse:
       $ref: './schemas/OSMResponse.yaml'
     User:

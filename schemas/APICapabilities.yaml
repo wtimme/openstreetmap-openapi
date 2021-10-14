@@ -1,0 +1,81 @@
+type: object
+properties:
+  version:
+    type: object
+    description: 'The API call versions that the server will accept'
+    properties:
+      minimum:
+        type: number
+        format: double
+        example: 0.6
+        xml:
+          attribute: true
+      maximum:
+        type: number
+        format: double
+        example: 0.6
+        xml:
+          attribute: true
+  area:
+    type: object
+    properties:
+      maximum:
+        type: number
+        format: double
+        description: 'The maximum area in square degrees that can be queried by API calls'
+        example: 0.25
+        xml:
+          attribute: true
+  note_area:
+    type: object
+    properties:
+      maximum:
+        type: number
+        example: 25
+        xml:
+          attribute: true
+  tracepoints:
+    type: object
+    properties:
+      per_page:
+        type: number
+        description: 'The maximum number of points in a single GPS trace. (Possibly incorrect)'
+        example: 5000
+        xml:
+          attribute: true
+  waynodes:
+    type: object
+    properties:
+      maximum:
+        type: number
+        description: 'The maximum number of nodes that a way may contain'
+        example: 2000
+        xml:
+          attribute: true
+  changesets:
+    type: object
+    properties:
+      maximum_elements:
+        type: number
+        description: 'The maximum number of combined nodes, ways and relations that can be contained in a changeset'
+        example: 10000
+        xml:
+          attribute: true
+  timeout:
+    type: object
+    properties:
+      seconds:
+        type: number
+        example: 300
+        xml:
+          attribute: true
+  status:
+    type: object
+    description: 'The status of the database, API and GPX API. The database field is informational, and the API/GPX-API fields indicate what the client should expect.'
+    properties:
+      database:
+        $ref: '../schemas/APIStatus.yaml'
+      api:
+        $ref: '../schemas/APIStatus.yaml'
+      gpx:
+        $ref: '../schemas/APIStatus.yaml'
