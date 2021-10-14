@@ -8,15 +8,15 @@ info:
     name: "ISC License"
     url: "https://github.com/bryceco/GoMap/blob/master/LICENSE.md"
 servers:
-  - url: https://api.openstreetmap.org/api/0.6
+  - url: https://api.openstreetmap.org
     description: Production server (uses live data)
-  - url: https://master.apis.dev.openstreetmap.org/api/0.6
+  - url: https://master.apis.dev.openstreetmap.org
     description: Sandbox server (uses test data)
 tags:
 - name: "user"
   description: "Everything on the user"
 paths:
-  /user/details.json:
+  /api/0.6/user/details.json:
     $ref: './paths/user_details.yaml'
 components:
   securitySchemes:
