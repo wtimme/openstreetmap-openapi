@@ -31,7 +31,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UserDetailsResponse'
+                type: object
+                allOf:
+                  - $ref: './schemas/OSMResponse.yaml'
+                properties:
+                  user:
+                    $ref: './schemas/User.yaml'
 components:
   securitySchemes:
     basicAuth:
@@ -40,13 +45,6 @@ components:
   schemas:
     OSMResponse:
       $ref: './schemas/OSMResponse.yaml'
-    UserDetailsResponse:
-      type: object
-      allOf:
-        - $ref: '#/components/schemas/OSMResponse'
-      properties:
-        user:
-          $ref: '#/components/schemas/User'
     User:
       $ref: './schemas/User.yaml'
 externalDocs:
