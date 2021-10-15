@@ -1,4 +1,4 @@
-# Swagger definition for OpenStreetMap
+# OpenAPI definition for OpenStreetMap
 
 This repository aims at providing a Swagger definition for OpenStreetMap
 which can then be used to auto-generate API clients for it.
