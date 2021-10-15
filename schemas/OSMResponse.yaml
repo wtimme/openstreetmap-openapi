@@ -15,3 +15,7 @@ properties:
     example: "http://www.openstreetmap.org/copyright"
     xml:
       attribute: true
+required:
+  - version
+  - copyright
+  - attribution

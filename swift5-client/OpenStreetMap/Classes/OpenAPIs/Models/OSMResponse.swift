@@ -12,11 +12,11 @@ import AnyCodable
 
 public struct OSMResponse: Codable, Hashable {
 
-    public var version: String?
-    public var copyright: String?
-    public var attribution: String?
+    public var version: String
+    public var copyright: String
+    public var attribution: String
 
-    public init(version: String? = nil, copyright: String? = nil, attribution: String? = nil) {
+    public init(version: String, copyright: String, attribution: String) {
         self.version = version
         self.copyright = copyright
         self.attribution = attribution
@@ -32,9 +32,9 @@ public struct OSMResponse: Codable, Hashable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(version, forKey: .version)
-        try container.encodeIfPresent(copyright, forKey: .copyright)
-        try container.encodeIfPresent(attribution, forKey: .attribution)
+        try container.encode(version, forKey: .version)
+        try container.encode(copyright, forKey: .copyright)
+        try container.encode(attribution, forKey: .attribution)
     }
 }
 

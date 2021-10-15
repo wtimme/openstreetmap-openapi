@@ -13,11 +13,11 @@ import AnyCodable
 public struct UserDetailsResponse: Codable, Hashable {
 
     public var user: User?
-    public var version: String?
-    public var copyright: String?
-    public var attribution: String?
+    public var version: String
+    public var copyright: String
+    public var attribution: String
 
-    public init(user: User? = nil, version: String? = nil, copyright: String? = nil, attribution: String? = nil) {
+    public init(user: User? = nil, version: String, copyright: String, attribution: String) {
         self.user = user
         self.version = version
         self.copyright = copyright
@@ -36,9 +36,9 @@ public struct UserDetailsResponse: Codable, Hashable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(user, forKey: .user)
-        try container.encodeIfPresent(version, forKey: .version)
-        try container.encodeIfPresent(copyright, forKey: .copyright)
-        try container.encodeIfPresent(attribution, forKey: .attribution)
+        try container.encode(version, forKey: .version)
+        try container.encode(copyright, forKey: .copyright)
+        try container.encode(attribution, forKey: .attribution)
     }
 }
 

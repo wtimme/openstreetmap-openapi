@@ -346,6 +346,10 @@ components:
           example: 'http://www.openstreetmap.org/copyright'
           xml:
             attribute: true
+      required:
+        - version
+        - copyright
+        - attribution
     Relation:
       allOf:
         - $ref: '#/components/schemas/Way/allOf/0'
