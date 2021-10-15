@@ -74,8 +74,8 @@ properties:
     description: 'The status of the database, API and GPX API. The database field is informational, and the API/GPX-API fields indicate what the client should expect.'
     properties:
       database:
-        $ref: '../schemas/APIStatus.yaml'
+        $ref: 'APIStatus.yaml'
       api:
-        $ref: '../schemas/APIStatus.yaml'
+        $ref: 'APIStatus.yaml'
       gpx:
-        $ref: '../schemas/APIStatus.yaml'
+        $ref: 'APIStatus.yaml'
