@@ -6,3 +6,6 @@ allOf:
         $ref: 'Latitude.yaml'
       lon:
         $ref: 'Longitude.yaml'
+    required:
+      - lat
+      - lon

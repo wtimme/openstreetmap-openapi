@@ -12,18 +12,15 @@ import AnyCodable
 
 public struct NodeAllOf: Codable, Hashable {
 
-    public var id: Double?
-    public var lat: Double?
-    public var lon: Double?
+    public var lat: Double
+    public var lon: Double
 
-    public init(id: Double? = nil, lat: Double? = nil, lon: Double? = nil) {
-        self.id = id
+    public init(lat: Double, lon: Double) {
         self.lat = lat
         self.lon = lon
     }
 
     public enum CodingKeys: String, CodingKey, CaseIterable {
-        case id
         case lat
         case lon
     }
@@ -32,9 +29,8 @@ public struct NodeAllOf: Codable, Hashable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(id, forKey: .id)
-        try container.encodeIfPresent(lat, forKey: .lat)
-        try container.encodeIfPresent(lon, forKey: .lon)
+        try container.encode(lat, forKey: .lat)
+        try container.encode(lon, forKey: .lon)
     }
 }
 

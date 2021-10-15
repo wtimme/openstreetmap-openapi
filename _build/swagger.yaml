@@ -324,6 +324,9 @@ components:
               minimum: -180
               maximum: 180
               example: 13.3776392
+          required:
+            - lat
+            - lon
     OSMResponse:
       type: object
       properties:

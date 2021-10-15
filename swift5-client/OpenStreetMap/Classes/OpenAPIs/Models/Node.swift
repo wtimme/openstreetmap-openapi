@@ -20,10 +20,10 @@ public struct Node: Codable, Hashable {
     public var user: String
     public var uid: Double
     public var tags: [String: String]?
-    public var lat: Double?
-    public var lon: Double?
+    public var lat: Double
+    public var lon: Double
 
-    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, lat: Double? = nil, lon: Double? = nil) {
+    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, lat: Double, lon: Double) {
         self.type = type
         self.id = id
         self.timestamp = timestamp
@@ -61,8 +61,8 @@ public struct Node: Codable, Hashable {
         try container.encode(user, forKey: .user)
         try container.encode(uid, forKey: .uid)
         try container.encodeIfPresent(tags, forKey: .tags)
-        try container.encodeIfPresent(lat, forKey: .lat)
-        try container.encodeIfPresent(lon, forKey: .lon)
+        try container.encode(lat, forKey: .lat)
+        try container.encode(lon, forKey: .lon)
     }
 }
 
