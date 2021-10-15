@@ -1,5 +1,5 @@
 type: string
-enum: ['online']
+enum: ['online', 'readonly', 'offline']
 example: 'online'
 description: >
   Status:
