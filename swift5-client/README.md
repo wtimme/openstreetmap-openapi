@@ -43,6 +43,7 @@ Class | Method | HTTP request | Description
  - [APICapabilitiesTracepoints](docs/APICapabilitiesTracepoints.md)
  - [APICapabilitiesVersion](docs/APICapabilitiesVersion.md)
  - [APICapabilitiesWaynodes](docs/APICapabilitiesWaynodes.md)
+ - [APIStatus](docs/APIStatus.md)
  - [OSMResponse](docs/OSMResponse.md)
  - [User](docs/User.md)
  - [UserChangesets](docs/UserChangesets.md)

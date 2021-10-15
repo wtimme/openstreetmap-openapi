@@ -38,6 +38,8 @@ components:
       $ref: './schemas/APICapabilitiesResponse.yaml'
     APIPermission:
       $ref: './schemas/APIPermission.yaml'
+    APIStatus:
+      $ref: './schemas/APIStatus.yaml'
     OSMResponse:
       $ref: './schemas/OSMResponse.yaml'
     User:

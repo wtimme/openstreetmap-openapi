@@ -22,6 +22,7 @@ OpenStreetMap/Classes/OpenAPIs/Models/APICapabilitiesTimeout.swift
 OpenStreetMap/Classes/OpenAPIs/Models/APICapabilitiesTracepoints.swift
 OpenStreetMap/Classes/OpenAPIs/Models/APICapabilitiesVersion.swift
 OpenStreetMap/Classes/OpenAPIs/Models/APICapabilitiesWaynodes.swift
+OpenStreetMap/Classes/OpenAPIs/Models/APIStatus.swift
 OpenStreetMap/Classes/OpenAPIs/Models/OSMResponse.swift
 OpenStreetMap/Classes/OpenAPIs/Models/User.swift
 OpenStreetMap/Classes/OpenAPIs/Models/UserChangesets.swift
@@ -45,6 +46,7 @@ docs/APICapabilitiesTimeout.md
 docs/APICapabilitiesTracepoints.md
 docs/APICapabilitiesVersion.md
 docs/APICapabilitiesWaynodes.md
+docs/APIStatus.md
 docs/MiscAPI.md
 docs/OSMResponse.md
 docs/User.md
