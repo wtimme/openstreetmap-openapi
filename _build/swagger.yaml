@@ -312,10 +312,6 @@ components:
         - $ref: '#/components/schemas/Way/allOf/0'
         - type: object
           properties:
-            id:
-              type: number
-              format: int64
-              example: 85883220
             lat:
               type: number
               format: double
