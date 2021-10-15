@@ -16,15 +16,15 @@ open class MiscAPI {
      This API call is meant to provide information about the capabilities and limitations of the current API.
      
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
+     - parameter completion: completion handler to receive the result
      */
-    open class func getAPICapabilities(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ data: APICapabilitiesResponse?, _ error: Error?) -> Void)) {
+    open class func getAPICapabilities(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<APICapabilitiesResponse, Error>) -> Void)) {
         getAPICapabilitiesWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
-                completion(response.body, nil)
+                completion(.success(response.body!))
             case let .failure(error):
-                completion(nil, error)
+                completion(.failure(error))
             }
         }
     }
@@ -56,15 +56,15 @@ open class MiscAPI {
      Returns the permissions granted to the current API connection.
      
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
+     - parameter completion: completion handler to receive the result
      */
-    open class func getAPIPermissions(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ data: OSMResponse?, _ error: Error?) -> Void)) {
+    open class func getAPIPermissions(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<OSMResponse, Error>) -> Void)) {
         getAPIPermissionsWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
-                completion(response.body, nil)
+                completion(.success(response.body!))
             case let .failure(error):
-                completion(nil, error)
+                completion(.failure(error))
             }
         }
     }
@@ -99,15 +99,15 @@ open class MiscAPI {
      Returns a list of API versions supported by this instance.
      
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
+     - parameter completion: completion handler to receive the result
      */
-    open class func getAPIVersions(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ data: APIVersionsResponse?, _ error: Error?) -> Void)) {
+    open class func getAPIVersions(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<APIVersionsResponse, Error>) -> Void)) {
         getAPIVersionsWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
-                completion(response.body, nil)
+                completion(.success(response.body!))
             case let .failure(error):
-                completion(nil, error)
+                completion(.failure(error))
             }
         }
     }

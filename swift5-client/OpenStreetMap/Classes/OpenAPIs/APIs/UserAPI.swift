@@ -16,15 +16,15 @@ open class UserAPI {
      Get the user's profile as well as their OSM messages and preferences
      
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
+     - parameter completion: completion handler to receive the result
      */
-    open class func getSignedInUserDetails(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ data: UserDetailsResponse?, _ error: Error?) -> Void)) {
+    open class func getSignedInUserDetails(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<UserDetailsResponse, Error>) -> Void)) {
         getSignedInUserDetailsWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
-                completion(response.body, nil)
+                completion(.success(response.body!))
             case let .failure(error):
-                completion(nil, error)
+                completion(.failure(error))
             }
         }
     }

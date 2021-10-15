@@ -2,5 +2,6 @@
   "projectName": "OpenStreetMap",
   "podLicense": "'ISC License'",
   "podSummary": "Auto-generated API client for OpenStreetMap",
-  "podHomepage": "https://github.com/wtimme/osm-swagger"
+  "podHomepage": "https://github.com/wtimme/osm-swagger",
+  "responseAs": "Result"
 }
