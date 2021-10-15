@@ -13,7 +13,17 @@ use the [online Swagger editor][2].
 After you're done making changes, simply copy the contents to the `swagger.yaml`
 file and create a pull request.
 
-### Regenerating the API client
+## Bundling the API definition into one single file
+
+The API definition is split across multiple files
+in order to improve maintainability. In order to have
+it in one single file, use `swagger-cli`, like so:
+
+    % swagger-cli bundle swagger.yaml -o _build/swagger.yaml -t yaml
+
+Find the bundled API definition at `_build/swagger.yaml`.
+
+## Regenerating the Swift client
 
 Install `openapi-generator` and run:
 
