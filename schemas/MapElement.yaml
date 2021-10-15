@@ -1,0 +1,30 @@
+type: object
+properties:
+  type:
+    $ref: 'MapElementType.yaml'
+  id:
+    $ref: 'MapElementId.yaml'
+  timestamp:
+    type: string
+    format: date-time
+    example: '2015-10-01T19:36:42Z'
+  version:
+    type: number
+    example: 14
+  changeset:
+    type: number
+    format: int64
+    example: 34376083
+  user:
+    type: string
+    example: 'anbr'
+  uid:
+    type: number
+    example: 43566
+  tags:
+    type: object
+    additionalProperties:
+      type: string
+    example:
+      building:architecture: neoclassicism
+      building:material: sandstone

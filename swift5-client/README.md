@@ -25,6 +25,7 @@ All URIs are relative to *https://api.openstreetmap.org*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*MapAPI* | [**getMapDataByBoundingBox**](docs/MapAPI.md#getmapdatabyboundingbox) | **GET** /api/0.6/map | Retrieves map data by the given bounding box.
 *MiscAPI* | [**getAPICapabilities**](docs/MiscAPI.md#getapicapabilities) | **GET** /api/capabilities | This API call is meant to provide information about the capabilities and limitations of the current API.
 *MiscAPI* | [**getAPIPermissions**](docs/MiscAPI.md#getapipermissions) | **GET** /api/0.6/permissions | Returns the permissions granted to the current API connection.
 *MiscAPI* | [**getAPIVersions**](docs/MiscAPI.md#getapiversions) | **GET** /api/versions | Returns a list of API versions supported by this instance.
@@ -45,7 +46,16 @@ Class | Method | HTTP request | Description
  - [APICapabilitiesWaynodes](docs/APICapabilitiesWaynodes.md)
  - [APIStatus](docs/APIStatus.md)
  - [APIVersionsResponse](docs/APIVersionsResponse.md)
+ - [MapDataResponse](docs/MapDataResponse.md)
+ - [MapDataResponseElementsOneOf](docs/MapDataResponseElementsOneOf.md)
+ - [MapElement](docs/MapElement.md)
+ - [MapElementType](docs/MapElementType.md)
+ - [Node](docs/Node.md)
+ - [NodeAllOf](docs/NodeAllOf.md)
  - [OSMResponse](docs/OSMResponse.md)
+ - [Relation](docs/Relation.md)
+ - [RelationAllOf](docs/RelationAllOf.md)
+ - [RelationMember](docs/RelationMember.md)
  - [User](docs/User.md)
  - [UserChangesets](docs/UserChangesets.md)
  - [UserDetailsResponse](docs/UserDetailsResponse.md)
@@ -53,6 +63,8 @@ Class | Method | HTTP request | Description
  - [UserMessagesReceived](docs/UserMessagesReceived.md)
  - [UserMessagesSent](docs/UserMessagesSent.md)
  - [UserTraces](docs/UserTraces.md)
+ - [Way](docs/Way.md)
+ - [WayAllOf](docs/WayAllOf.md)
 
 
 ## Documentation For Authorization

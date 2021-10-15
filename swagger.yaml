@@ -13,6 +13,8 @@ servers:
   - url: https://master.apis.dev.openstreetmap.org
     description: Sandbox server (uses test data)
 tags:
+- name: "map"
+  description: "Operations related to map data"
 - name: "user"
   description: "Everything on the user"
 - name: "misc"
@@ -22,6 +24,8 @@ paths:
     $ref: './paths/api_versions.yaml'
   /api/capabilities:
     $ref: './paths/api_capabilities.yaml'
+  /api/0.6/map:
+    $ref: './paths/map_boundingBox.yaml'
   /api/0.6/permissions:
     $ref: './paths/api_permissions.yaml'
   /api/0.6/user/details.json:
@@ -42,12 +46,18 @@ components:
       $ref: './schemas/APIStatus.yaml'
     APIVersionsResponse:
       $ref: './schemas/APIVersionsResponse.yaml'
+    Node:
+      $ref: './schemas/Node.yaml'
     OSMResponse:
       $ref: './schemas/OSMResponse.yaml'
+    Relation:
+      $ref: './schemas/Relation.yaml'
     User:
       $ref: './schemas/User.yaml'
     UserDetailsResponse:
       $ref: './schemas/UserDetailsResponse.yaml'
+    Way:
+      $ref: './schemas/Way.yaml'
 externalDocs:
   description: "Find more information on the OSM wiki"
   url: "https://wiki.openstreetmap.org/"

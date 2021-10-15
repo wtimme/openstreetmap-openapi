@@ -1,0 +1,5 @@
+type: number
+format: double
+minimum: -90
+maximum: 90
+example: 52.515785

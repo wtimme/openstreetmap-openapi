@@ -1,0 +1,8 @@
+allOf:
+  - $ref: 'MapElement.yaml'
+  - type: object
+    properties:
+      nodes:
+        type: array
+        items:
+          $ref: 'MapElementId.yaml'

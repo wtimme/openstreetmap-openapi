@@ -1,0 +1,25 @@
+type: object
+allOf:
+  - $ref: 'OSMResponse.yaml'
+properties:
+  bounds:
+    type: object
+    properties:
+      minlat:
+        $ref: 'Latitude.yaml'
+      minlon:
+        $ref: 'Longitude.yaml'
+      maxlat:
+        $ref: 'Latitude.yaml'
+      maxlon:
+        $ref: 'Longitude.yaml'
+  elements:
+    type: array
+    items:
+      oneOf:
+        - $ref: 'Node.yaml'
+        - $ref: 'Relation.yaml'
+        - $ref: 'Way.yaml'
+xml:
+  wrapped: true
+  name: osm

@@ -1,0 +1,12 @@
+allOf:
+  - $ref: 'MapElement.yaml'
+  - type: object
+    properties:
+      id:
+        type: number
+        format: int64
+        example: 85883220
+      lat:
+        $ref: 'Latitude.yaml'
+      lon:
+        $ref: 'Longitude.yaml'
