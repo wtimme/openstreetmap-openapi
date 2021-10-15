@@ -20,9 +20,9 @@ public struct Way: Codable, Hashable {
     public var user: String
     public var uid: Double
     public var tags: [String: String]?
-    public var nodes: [Double]?
+    public var nodes: [Double]
 
-    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, nodes: [Double]? = nil) {
+    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, nodes: [Double]) {
         self.type = type
         self.id = id
         self.timestamp = timestamp
@@ -58,7 +58,7 @@ public struct Way: Codable, Hashable {
         try container.encode(user, forKey: .user)
         try container.encode(uid, forKey: .uid)
         try container.encodeIfPresent(tags, forKey: .tags)
-        try container.encodeIfPresent(nodes, forKey: .nodes)
+        try container.encode(nodes, forKey: .nodes)
     }
 }
 

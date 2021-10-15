@@ -12,9 +12,9 @@ import AnyCodable
 
 public struct WayAllOf: Codable, Hashable {
 
-    public var nodes: [Double]?
+    public var nodes: [Double]
 
-    public init(nodes: [Double]? = nil) {
+    public init(nodes: [Double]) {
         self.nodes = nodes
     }
 
@@ -26,7 +26,7 @@ public struct WayAllOf: Codable, Hashable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(nodes, forKey: .nodes)
+        try container.encode(nodes, forKey: .nodes)
     }
 }
 

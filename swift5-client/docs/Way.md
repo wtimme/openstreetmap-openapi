@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **user** | **String** |  | 
 **uid** | **Double** |  | 
 **tags** | **[String: String]** |  | [optional] 
-**nodes** | **[Double]** |  | [optional] 
+**nodes** | **[Double]** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

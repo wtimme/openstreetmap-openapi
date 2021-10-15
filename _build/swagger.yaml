@@ -477,6 +477,8 @@ components:
                 type: number
                 format: int64
                 example: 85883220
+          required:
+            - nodes
 externalDocs:
   description: Find more information on the OSM wiki
   url: 'https://wiki.openstreetmap.org/'

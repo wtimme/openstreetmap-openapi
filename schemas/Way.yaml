@@ -6,3 +6,5 @@ allOf:
         type: array
         items:
           $ref: 'MapElementId.yaml'
+    required:
+      - nodes
