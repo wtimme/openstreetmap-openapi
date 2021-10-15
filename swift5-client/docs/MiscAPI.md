@@ -99,7 +99,7 @@ This endpoint does not need any parameter.
 
 # **getAPIVersions**
 ```swift
-    open class func getAPIVersions(completion: @escaping (_ data: OSMResponse?, _ error: Error?) -> Void)
+    open class func getAPIVersions(completion: @escaping (_ data: APIVersionsResponse?, _ error: Error?) -> Void)
 ```
 
 Returns a list of API versions supported by this instance.
@@ -128,7 +128,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**OSMResponse**](OSMResponse.md)
+[**APIVersionsResponse**](APIVersionsResponse.md)
 
 ### Authorization
 

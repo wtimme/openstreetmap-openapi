@@ -101,7 +101,7 @@ open class MiscAPI {
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAPIVersions(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ data: OSMResponse?, _ error: Error?) -> Void)) {
+    open class func getAPIVersions(apiResponseQueue: DispatchQueue = OpenStreetMap.apiResponseQueue, completion: @escaping ((_ data: APIVersionsResponse?, _ error: Error?) -> Void)) {
         getAPIVersionsWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
@@ -115,9 +115,9 @@ open class MiscAPI {
     /**
      Returns a list of API versions supported by this instance.
      - GET /api/versions
-     - returns: RequestBuilder<OSMResponse> 
+     - returns: RequestBuilder<APIVersionsResponse> 
      */
-    open class func getAPIVersionsWithRequestBuilder() -> RequestBuilder<OSMResponse> {
+    open class func getAPIVersionsWithRequestBuilder() -> RequestBuilder<APIVersionsResponse> {
         let localVariablePath = "/api/versions"
         let localVariableURLString = OpenStreetMap.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
@@ -130,7 +130,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<OSMResponse>.Type = OpenStreetMap.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<APIVersionsResponse>.Type = OpenStreetMap.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }

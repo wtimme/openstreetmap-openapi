@@ -9,17 +9,4 @@ get:
       content:
         application/xml:
           schema:
-            type: object
-            allOf:
-              - $ref: '../schemas/OSMResponse.yaml'
-            properties:
-              api:
-                type: object
-                properties:
-                  version:
-                    type: number
-                    format: double
-                    example: 0.6
-            xml:
-              wrapped: true
-              name: osm
+            $ref: '../schemas/APIVersionsResponse.yaml'

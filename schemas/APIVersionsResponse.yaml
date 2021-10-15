@@ -1,0 +1,14 @@
+type: object
+allOf:
+  - $ref: 'OSMResponse.yaml'
+properties:
+  api:
+    type: object
+    properties:
+      version:
+        type: number
+        format: double
+        example: 0.6
+xml:
+  wrapped: true
+  name: osm

@@ -44,6 +44,7 @@ Class | Method | HTTP request | Description
  - [APICapabilitiesVersion](docs/APICapabilitiesVersion.md)
  - [APICapabilitiesWaynodes](docs/APICapabilitiesWaynodes.md)
  - [APIStatus](docs/APIStatus.md)
+ - [APIVersionsResponse](docs/APIVersionsResponse.md)
  - [OSMResponse](docs/OSMResponse.md)
  - [User](docs/User.md)
  - [UserChangesets](docs/UserChangesets.md)
