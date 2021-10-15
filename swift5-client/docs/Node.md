@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**MapElementType**](MapElementType.md) |  | [optional] 
-**id** | **Double** |  | [optional] 
-**timestamp** | **Date** |  | [optional] 
-**version** | **Double** |  | [optional] 
-**changeset** | **Double** |  | [optional] 
-**user** | **String** |  | [optional] 
-**uid** | **Double** |  | [optional] 
+**type** | [**MapElementType**](MapElementType.md) |  | 
+**id** | **Double** |  | 
+**timestamp** | **Date** |  | 
+**version** | **Double** |  | 
+**changeset** | **Double** |  | 
+**user** | **String** |  | 
+**uid** | **Double** |  | 
 **tags** | **[String: String]** |  | [optional] 
 **lat** | **Double** |  | [optional] 
 **lon** | **Double** |  | [optional] 

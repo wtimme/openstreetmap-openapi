@@ -460,6 +460,14 @@ components:
               example:
                 'building:architecture': neoclassicism
                 'building:material': sandstone
+          required:
+            - type
+            - id
+            - timestamp
+            - version
+            - changeset
+            - user
+            - uid
         - type: object
           properties:
             nodes:

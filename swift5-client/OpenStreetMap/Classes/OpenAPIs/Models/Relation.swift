@@ -12,17 +12,17 @@ import AnyCodable
 
 public struct Relation: Codable, Hashable {
 
-    public var type: MapElementType?
-    public var id: Double?
-    public var timestamp: Date?
-    public var version: Double?
-    public var changeset: Double?
-    public var user: String?
-    public var uid: Double?
+    public var type: MapElementType
+    public var id: Double
+    public var timestamp: Date
+    public var version: Double
+    public var changeset: Double
+    public var user: String
+    public var uid: Double
     public var tags: [String: String]?
     public var members: [RelationMember]?
 
-    public init(type: MapElementType? = nil, id: Double? = nil, timestamp: Date? = nil, version: Double? = nil, changeset: Double? = nil, user: String? = nil, uid: Double? = nil, tags: [String: String]? = nil, members: [RelationMember]? = nil) {
+    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, members: [RelationMember]? = nil) {
         self.type = type
         self.id = id
         self.timestamp = timestamp
@@ -50,13 +50,13 @@ public struct Relation: Codable, Hashable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(type, forKey: .type)
-        try container.encodeIfPresent(id, forKey: .id)
-        try container.encodeIfPresent(timestamp, forKey: .timestamp)
-        try container.encodeIfPresent(version, forKey: .version)
-        try container.encodeIfPresent(changeset, forKey: .changeset)
-        try container.encodeIfPresent(user, forKey: .user)
-        try container.encodeIfPresent(uid, forKey: .uid)
+        try container.encode(type, forKey: .type)
+        try container.encode(id, forKey: .id)
+        try container.encode(timestamp, forKey: .timestamp)
+        try container.encode(version, forKey: .version)
+        try container.encode(changeset, forKey: .changeset)
+        try container.encode(user, forKey: .user)
+        try container.encode(uid, forKey: .uid)
         try container.encodeIfPresent(tags, forKey: .tags)
         try container.encodeIfPresent(members, forKey: .members)
     }
