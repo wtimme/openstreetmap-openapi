@@ -12,9 +12,9 @@ import AnyCodable
 
 public struct RelationAllOf: Codable, Hashable {
 
-    public var members: [RelationMember]?
+    public var members: [RelationMember]
 
-    public init(members: [RelationMember]? = nil) {
+    public init(members: [RelationMember]) {
         self.members = members
     }
 
@@ -26,7 +26,7 @@ public struct RelationAllOf: Codable, Hashable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(members, forKey: .members)
+        try container.encode(members, forKey: .members)
     }
 }
 

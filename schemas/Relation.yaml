@@ -6,3 +6,5 @@ allOf:
         type: array
         items:
           $ref: 'RelationMember.yaml'
+    required:
+      - members

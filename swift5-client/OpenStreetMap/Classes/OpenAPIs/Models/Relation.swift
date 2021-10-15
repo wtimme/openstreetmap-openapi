@@ -20,9 +20,9 @@ public struct Relation: Codable, Hashable {
     public var user: String
     public var uid: Double
     public var tags: [String: String]?
-    public var members: [RelationMember]?
+    public var members: [RelationMember]
 
-    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, members: [RelationMember]? = nil) {
+    public init(type: MapElementType, id: Double, timestamp: Date, version: Double, changeset: Double, user: String, uid: Double, tags: [String: String]? = nil, members: [RelationMember]) {
         self.type = type
         self.id = id
         self.timestamp = timestamp
@@ -58,7 +58,7 @@ public struct Relation: Codable, Hashable {
         try container.encode(user, forKey: .user)
         try container.encode(uid, forKey: .uid)
         try container.encodeIfPresent(tags, forKey: .tags)
-        try container.encodeIfPresent(members, forKey: .members)
+        try container.encode(members, forKey: .members)
     }
 }
 

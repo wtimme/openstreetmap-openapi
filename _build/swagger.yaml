@@ -366,6 +366,8 @@ components:
                   role:
                     type: string
                     example: part
+          required:
+            - members
     User:
       type: object
       properties:
