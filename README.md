@@ -30,4 +30,4 @@ Install `openapi-generator` and run:
     % rm -rf swift5-client; openapi-generator generate -i swagger.yaml -g swift5 -c config.json -o swift5-client
 
 [1]: https://wtimme.github.io/openstreetmap-openapi/
-[2]: https://editor.swagger.io/?url=https://wtimme.github.io/osm-swagger/swagger.yaml
+[2]: https://editor.swagger.io/?url=https://wtimme.github.io/openstreetmap-openapi/swagger.yaml
