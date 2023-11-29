@@ -85,6 +85,7 @@ paths:
             - `top` is the latitude of the top (northernmost) side of the bounding box.
       responses:
         '200':
+          description: The map data within the bounding box
           content:
             application/json:
               schema:
@@ -360,7 +361,7 @@ components:
                 type: object
                 properties:
                   type:
-                    $ref: '#/paths/~1api~10.6~1map/get/responses/200/content/application~1json/schema/properties/elements/items/oneOf/0/allOf/0/properties/type'
+                    $ref: '#/components/schemas/Way/allOf/0/properties/type'
                   ref:
                     $ref: '#/components/schemas/Way/allOf/1/properties/nodes/items'
                   role:
