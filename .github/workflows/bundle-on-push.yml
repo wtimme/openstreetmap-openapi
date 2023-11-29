@@ -1,0 +1,28 @@
+name: "On Push: Bundle into a single file"
+
+on:
+  push:
+    paths:
+      - 'swagger.yaml'
+      - 'paths/*.yaml'
+      - '.github/workflows/bundle-on-push.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bundle_into_single_file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mpetrunic/swagger-cli-action@v1.0.0
+        with:
+          command: "bundle swagger.yaml -o _build/swagger.yaml -t yaml"
+      - name: Commit and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add _build/
+          git commit -m "Bundle contract into a single file"
+          git push
